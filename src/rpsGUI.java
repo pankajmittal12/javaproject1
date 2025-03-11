@@ -28,7 +28,7 @@ class rpsGUI extends JFrame implements ActionListener{
 
         //set height and width to the frame
 
-        setSize(500, 560);
+        setSize(600, 600);
 
         //set null to the layout management, so we can use absolute positioning for the frame
         //(i.e setting x,y coordinates and width/height values);
@@ -43,6 +43,10 @@ class rpsGUI extends JFrame implements ActionListener{
 
         setLocationRelativeTo(null);
 
+        // false resizeble
+
+        setResizable(false);
+
         //add gui components
 
         addGUIComponents();
@@ -55,7 +59,7 @@ class rpsGUI extends JFrame implements ActionListener{
 
         //set x,y coordinates and height and width
 
-        computerScoreLabel.setBounds(0, 43, 500, 30);
+        computerScoreLabel.setBounds(50, 43, 500, 30);
 
         //set the font to the font family of the dialog, font-width bold and a font size 26
 
@@ -70,7 +74,7 @@ class rpsGUI extends JFrame implements ActionListener{
         add(computerScoreLabel);
 
         computerChoices = new JLabel("?");
-        computerChoices.setBounds(175, 118, 208, 61);
+        computerChoices.setBounds(195, 118, 208, 61);
         computerChoices.setFont(new Font("Dailog", Font.PLAIN, 18));
         computerChoices.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -80,7 +84,7 @@ class rpsGUI extends JFrame implements ActionListener{
         add(computerChoices);
 
         playerScoreLabel = new JLabel("Player : 0");
-        playerScoreLabel.setBounds(0, 317, 450, 30);
+        playerScoreLabel.setBounds(70, 317, 450, 30);
         playerScoreLabel.setFont(new Font("Dialog", Font.BOLD, 26));
         playerScoreLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(playerScoreLabel);
@@ -98,7 +102,7 @@ class rpsGUI extends JFrame implements ActionListener{
         // paper button
 
         paperButton = new JButton("Paper");
-        paperButton.setBounds(165, 387, 105, 81);
+        paperButton.setBounds(250, 387, 105, 81);
         paperButton.setFont(new Font("Dialog", Font.PLAIN, 19));
         paperButton.addActionListener(this);
         add(paperButton);
@@ -106,7 +110,7 @@ class rpsGUI extends JFrame implements ActionListener{
         // sicssor button
 
         sicssorButton = new JButton("Sicssor");
-        sicssorButton.setBounds(290, 387, 105, 81);
+        sicssorButton.setBounds(450, 387, 105, 81);
         sicssorButton.setFont(new Font("Dialog", Font.PLAIN, 19));
         sicssorButton.addActionListener(this);
         add(sicssorButton);
